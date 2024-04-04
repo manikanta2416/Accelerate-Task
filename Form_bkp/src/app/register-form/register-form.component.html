@@ -1,0 +1,190 @@
+<app-nav-bar></app-nav-bar>
+<br>
+<form [formGroup]="RegisterFrom" (ngSubmit)="submitRegisterForm(RegisterFrom)">
+  <div class="container">
+    <!-- <p style="background-image: url('/assets/requestingTeamLocation-4667143_1920.jpg');"> -->
+
+    <div class="Parent">
+
+      <!--<div class="form-group col-md-6">
+        <label for="fn"><b>requestorId<span style="color: red;">*</span></b>:</label>
+        <input type="text" class="form-control" id="fn" placeholder="requestorId" formControlName="requestorId">
+        <p *ngIf="RegisterFrom.controls['requestorId'].errors?.['required'] && RegisterFrom.controls['requestorId'].touched" class="alert alert-danger">requestorId is required</p>
+      </div>-->
+      <div class="form-group col-md-6">
+        <label for=""><b>Email Id<span style="color: red;">*</span></b>:</label>
+        <input type="text" class="form-control" placeholder="enter requestorEmail" formControlName="requestorEmail">
+        <p *ngIf="RegisterFrom.controls['requestorEmail'].errors?.['required'] && RegisterFrom.controls['requestorEmail'].touched" class="alert alert-danger">requestorEmail is required</p>
+        <p *ngIf="RegisterFrom.controls['requestorEmail'].errors?.['pattern'] && RegisterFrom.controls['requestorEmail']
+        .dirty" class="alert alert-danger">requestorEmail should be in proper format</p>
+      </div>
+      <div class="form-group col-md-6">
+        <label for="fn"><b>requestorName<span style="color: red;">*</span></b>:</label>
+        <input type="text" class="form-control" id="fn" placeholder="requestorName" formControlName="requestorName">
+        <p *ngIf="RegisterFrom.controls['requestorName'].errors?.['required'] && RegisterFrom.controls['requestorName'].touched" class="alert alert-danger">requestorName is required</p>
+        <p *ngIf="RegisterFrom.controls['requestorName'].errors?.['minlength'] && RegisterFrom.controls['requestorName'].dirty" class="alert alert-danger">Mininum 4 characters are required</p>
+      </div>
+      <div class="form-group col-md-6">
+        <label for="ln"><b>Criticality<span style="color: red;">*</span></b>:</label>
+        <input type="text" class="form-control" id="ln" placeholder="enter Criticality" formControlName="Criticality">
+        <p *ngIf="RegisterFrom.controls['Criticality'].errors?.['required'] && RegisterFrom.controls['Criticality'].touched" class="alert alert-danger">Criticality is required</p>
+
+      </div>
+
+      <div class="form-group col-md-6">
+        <label for=""><b>requestingTeam<span style="color: red;">*</span></b>:</label>
+        <input type="text" class="form-control" placeholder="enter requestingTeam" formControlName="requestingTeam">
+        <p *ngIf="RegisterFrom.controls['requestingTeam'].errors?.['required'] && RegisterFrom.controls['requestingTeam'].touched" class="alert alert-danger">requestingTeam is required</p>
+
+      </div>
+      <div class="form-group col-md-6">
+        <label for=""><b>requestingTeamLocation<span style="color: red;">*</span></b>:</label>
+        <input type="text" class="form-control" placeholder="enter requestingTeamLocation" formControlName="requestingTeamLocation">
+        <p *ngIf="RegisterFrom.controls['requestingTeamLocation'].errors?.['required'] && RegisterFrom.controls['requestingTeamLocation'].touched" class="alert alert-danger">requestingTeamLocation is required</p>
+
+      </div>
+      <div class="form-group col-md-6">
+        <label for=""><b>dataUsage<span style="color: red;">*</span></b>:</label>
+        <input type="text" class="form-control" placeholder="enter dataUsage" formControlName="dataUsage">
+        <p *ngIf="RegisterFrom.controls['dataUsage'].errors?.['required'] && RegisterFrom.controls['dataUsage'].touched" class="alert alert-danger">dataUsage is required</p>
+
+      </div>
+      <div class="form-group col-md-6">
+        <label for=""><b>criticalityReason<span style="color: red;">*</span></b></label>
+        <input type="text" class="form-control" placeholder="enter criticalityReason" formControlName="criticalityReason">
+        <p *ngIf="RegisterFrom.controls['criticalityReason'].errors?.['required'] && RegisterFrom.controls['criticalityReason'].touched" class="alert alert-danger">criticalityReason is required</p>
+
+      </div>
+
+      <div class="form-group col-md-6">
+        <label for=""><b>howIndexWillBeUsed<span style="color: red;">*</span></b>:</label>
+        <input type="text" class="form-control" placeholder="enter howIndexWillBeUsed" formControlName="howIndexWillBeUsed">
+        <p *ngIf="RegisterFrom.controls['howIndexWillBeUsed'].errors?.['required'] && RegisterFrom.controls['howIndexWillBeUsed'].touched" class="alert alert-danger">howIndexWillBeUsed is required</p>
+
+      </div>
+      <div class="form-group col-md-6">
+        <label for=""><b>requiredApplications<span style="color: red;">*</span></b>:</label>
+        <input type="text" class="form-control" placeholder="enter requiredApplications" formControlName="requiredApplications">
+        <p *ngIf="RegisterFrom.controls['requiredApplications'].errors?.['required'] && RegisterFrom.controls['requiredApplications'].touched" class="alert alert-danger">requiredApplications is required</p>
+
+      </div>
+      <div class="form-group col-md-6">
+        <label><b>historyRequired<span style="color: red;">*</span></b>:</label>
+        Yes
+        <input type="radio" formControlName="historyRequired" value="Yes">
+        No
+        <input type="radio" formControlName="historyRequired" value="No">
+        <p *ngIf="RegisterFrom.controls['historyRequired'].errors?.['required'] && RegisterFrom.controls['historyRequired'].touched" class="alert alert-danger">historyRequired is required</p>
+      </div>
+
+      <div class="form-group col-md-6">
+        <label for=""><b>indexType<span style="color: red;">*</span></b>:</label>
+        <input type="text" class="form-control" placeholder="enter indexType" formControlName="indexType">
+        <p *ngIf="RegisterFrom.controls['indexType'].errors?.['required'] && RegisterFrom.controls['indexType'].touched" class="alert alert-danger">indexType is required</p>
+
+      </div>
+
+      <!-- <div class="form-group col-md-6">
+
+          <label for="gender"><b>Gender<span style="color: red;">*</span></b>:</label>
+          <select id="gender" name="gender" formControlName="Gender">
+              <option value="Male">Male</option>
+              <option value="Female">Female</option>
+              <option value="0">others</option>
+          </select>
+          <p *ngIf="RegisterFrom.controls['Gender'].errors?.['required'] && RegisterFrom.controls['Gender'].touched" class="alert alert-danger">Gender is required</p>
+
+      </div> -->
+      <div class="form-group col-md-6">
+        <label for=""><b>blendComponents<span style="color: red;">*</span></b>:</label>
+        <input type="text" class="form-control" placeholder="enter blendComponents" formControlName="blendComponents">
+        <p *ngIf="RegisterFrom.controls['blendComponents'].errors?.['required'] && RegisterFrom.controls['blendComponents'].touched" class="alert alert-danger">blendComponents is required</p>
+
+      </div>
+      <div class="form-group col-md-6">
+        <label for=""><b>indexProvider<span style="color: red;">*</span></b>:</label>
+        <input type="text" class="form-control" placeholder="enter indexProvider" formControlName="indexProvider">
+        <p *ngIf="RegisterFrom.controls['indexProvider'].errors?.['required'] && RegisterFrom.controls['indexProvider'].touched" class="alert alert-danger">indexProvider is required</p>
+
+      </div>
+      <div class="form-group col-md-6">
+        <label for=""><b>requiredUniverse<span style="color: red;">*</span></b>:</label>
+        <input type="text" class="form-control" placeholder="enter requiredUniverse" formControlName="requiredUniverse">
+        <p *ngIf="RegisterFrom.controls['requiredUniverse'].errors?.['required'] && RegisterFrom.controls['requiredHistoryDate'].touched" class="alert alert-danger">requiredHistoryDate is required</p>
+
+      </div>
+
+      <div class="form-group col-md-6">
+        <label for=""><b>returnType<span style="color: red;">*</span></b>:</label>
+        <input type="text" class="form-control" placeholder="enter returnType" formControlName="returnType">
+        <p *ngIf="RegisterFrom.controls['returnType'].errors?.['required'] && RegisterFrom.controls['returnType'].touched" class="alert alert-danger">returnType is required</p>
+
+      </div>
+      <div class="form-group col-md-6">
+        <label><b>constituentsRequired<span style="color: red;">*</span></b>:</label>
+        Yes<input type="radio" formControlName="constituentsRequired" value="yes">
+        No<input type="radio" formControlName="constituentsRequired" value="no">
+
+        <p *ngIf="RegisterFrom.controls['constituentsRequired'].errors?.['required'] && RegisterFrom.controls
+        ['constituentsRequired'].touched" class="alert alert-danger">constituentsRequired is required</p>
+
+      </div>
+
+      <div class="form-group col-md-6">
+        <label for=""><b>baseCurrency<span style="color: red;">*</span></b>:</label>
+        <input type="text" class="form-control" placeholder="enter baseCurrency" formControlName="baseCurrency">
+        <p *ngIf="RegisterFrom.controls['baseCurrency'].errors?.['required'] && RegisterFrom.controls['baseCurrency'].touched" class="alert alert-danger">baseCurrency is required</p>
+
+      </div>
+
+      <div class="form-group col-md-6">
+        <label for=""><b>indexName<span style="color: red;">*</span></b>:</label>
+        <input type="text" class="form-control" placeholder="enter indexName" formControlName="indexName">
+        <p *ngIf="RegisterFrom.controls['indexName'].errors?.['required'] && RegisterFrom.controls['indexName'].touched" class="alert alert-danger">indexName is required</p>
+
+      </div>
+      <div class="form-group col-md-6">
+        <label for=""><b>vendorId<span style="color: red;">*</span></b>:</label>
+        <input type="text" class="form-control" placeholder="enter vendorId" formControlName="vendorId">
+        <p *ngIf="RegisterFrom.controls['vendorId'].errors?.['required'] && RegisterFrom.controls['vendorId'].touched" class="alert alert-danger">vendorId is required</p>
+
+      </div>
+      <div class="form-group col-md-6">
+        <label><b>isWACIDataRequired<span style="color: red;">*</span></b>:</label>
+        Yes<input type="radio" formControlName="isWACIDataRequired" value="Yes">
+        No<input type="radio" formControlName="isWACIDataRequired" value="No">
+
+        <p *ngIf="RegisterFrom.controls['isWACIDataRequired'].errors?.['required'] &&
+        RegisterFrom.controls['isWACIDataRequired'].touched" class="alert alert-danger">
+          isWACIDataRequired is required
+        </p>
+
+      </div>
+      <div class="form-group col-md-6">
+        <label for=""><b>indexCostApproval<span style="color: red;">*</span></b>:</label>
+        <input type="text" class="form-control" placeholder="enter indexCostApproval" formControlName="indexCostApproval">
+        <p *ngIf="RegisterFrom.controls['indexCostApproval'].errors?.['required'] && RegisterFrom.controls['indexCostApproval'].touched" class="alert alert-danger">indexCostApproval is required</p>
+
+      </div>
+      <div class="form-group col-md-6">
+        <label for=""><b>allergapproverEmailies<span style="color: red;">*</span></b>:</label>
+        <input type="text" class="form-control" placeholder="enter allergapproverEmailies" formControlName="allergapproverEmailies">
+        <p *ngIf="RegisterFrom.controls['allergapproverEmailies'].errors?.['required'] && RegisterFrom.controls['allergapproverEmailies'].touched" class="alert alert-danger">allergapproverEmailies is required</p>
+
+      </div>
+      <div class="form-group col-md-6">
+        <label for=""><b>requiredHistoryDate<span style="color: red;">*</span></b>:</label>
+        <input type="date" class="form-control" placeholder="enter requiredHistoryDate" formControlName="requiredHistoryDate">
+        <p *ngIf="RegisterFrom.controls['requiredHistoryDate'].errors?.['required'] && RegisterFrom.controls['requiredHistoryDate'].touched" class="alert alert-danger">requiredHistoryDate is required</p>
+        <p *ngIf="RegisterFrom.controls['requiredHistoryDate'].errors?.['dateError'] && RegisterFrom.controls['requiredHistoryDate'].dirty" class="alert alert-danger">{{RegisterFrom.controls['requiredHistoryDate'].errors?.['dateError'].msg}}</p>
+      </div>
+
+
+    </div>
+  </div>
+  <div class="submit">
+    <button type="submit" class="btn btn-primary" [disabled]="RegisterFrom.invalid">submit</button>
+
+  </div>
+</form>
+

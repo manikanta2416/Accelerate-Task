@@ -1,0 +1,36 @@
+.Parent {
+  display: grid;
+  height: 1200px;
+  width: 700px;
+  // border: 2px solid black;
+  border-radius: 15px;
+  // flex-wrap:wrap;
+  grid-template-columns: 300px 300px;
+  justify-content: space-evenly;
+  align-content: space-evenly;
+  background-color: rgb(239, 237, 237);
+}
+
+.container {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+}
+
+.child {
+  width: 48%;
+}
+
+img {
+  opacity: 0.2;
+}
+
+input {
+  width: 300px;
+}
+
+.submit {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}

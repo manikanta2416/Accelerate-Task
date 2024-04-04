@@ -1,0 +1,15 @@
+<app-nav-bar></app-nav-bar>
+  <div class="table-responsive" style="text-align: center; width: 40%; height: 40%; margin: 0 auto;">
+  <table class="table table-bordered table-hover" style="background-color: lightgrey;">
+    <thead class="thead-dark">
+      <tr>
+        <th style="width: 40%;">Requestor Name</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let requests of request">
+        <td>{{ requests.requestorName }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
