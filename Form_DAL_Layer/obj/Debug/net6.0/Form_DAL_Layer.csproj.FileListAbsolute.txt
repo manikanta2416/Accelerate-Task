@@ -1,0 +1,14 @@
+C:\Users\18981\source\repos\Form_solution\Form_DAL_Layer\bin\Debug\net6.0\Form_DAL_Layer.deps.json
+C:\Users\18981\source\repos\Form_solution\Form_DAL_Layer\bin\Debug\net6.0\Form_DAL_Layer.runtimeconfig.json
+C:\Users\18981\source\repos\Form_solution\Form_DAL_Layer\bin\Debug\net6.0\Form_DAL_Layer.dll
+C:\Users\18981\source\repos\Form_solution\Form_DAL_Layer\bin\Debug\net6.0\Form_DAL_Layer.pdb
+C:\Users\18981\source\repos\Form_solution\Form_DAL_Layer\obj\Debug\net6.0\Form_DAL_Layer.csproj.AssemblyReference.cache
+C:\Users\18981\source\repos\Form_solution\Form_DAL_Layer\obj\Debug\net6.0\Form_DAL_Layer.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\18981\source\repos\Form_solution\Form_DAL_Layer\obj\Debug\net6.0\Form_DAL_Layer.AssemblyInfoInputs.cache
+C:\Users\18981\source\repos\Form_solution\Form_DAL_Layer\obj\Debug\net6.0\Form_DAL_Layer.AssemblyInfo.cs
+C:\Users\18981\source\repos\Form_solution\Form_DAL_Layer\obj\Debug\net6.0\Form_DAL_Layer.csproj.CoreCompileInputs.cache
+C:\Users\18981\source\repos\Form_solution\Form_DAL_Layer\obj\Debug\net6.0\Form_DAL_Layer.dll
+C:\Users\18981\source\repos\Form_solution\Form_DAL_Layer\obj\Debug\net6.0\refint\Form_DAL_Layer.dll
+C:\Users\18981\source\repos\Form_solution\Form_DAL_Layer\obj\Debug\net6.0\Form_DAL_Layer.pdb
+C:\Users\18981\source\repos\Form_solution\Form_DAL_Layer\obj\Debug\net6.0\Form_DAL_Layer.genruntimeconfig.cache
+C:\Users\18981\source\repos\Form_solution\Form_DAL_Layer\obj\Debug\net6.0\ref\Form_DAL_Layer.dll
